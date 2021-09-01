@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>{{ song.name }}</h2>
+<h3>Purchaser: {{ song.purchaser }}</h3>
+<p>{{ song.description }}</p>
+<a href="{% url 'song-update' song.pk %}">+ Update Song</a>
+<a href="{% url 'song-delete' song.pk %}">+ Delete Song</a>
+
+{% endblock content %}
